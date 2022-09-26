@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM INDEX</title>
+  </head>
+  <body>
+    <h1 id="headingOne" class="primary-color primary-text">Hello world!</h1>
+    <ul>
+      <li>
+        <a href="#">google</a>
+        item1</li>
+      <li><a href="#">item2</a></li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+    </ul>
+    <script>
+      links = document.querySelectorAll('a');
+      links.forEach(link => {
+       console.log(link.innerHTML)
+      });
+      console.log(links);
+
+      let a = [1, 2, 3, 4];
+      a.forEach((a, index)=> console.log(`${index} : ${a}`))
+    
+      for(let i = 0; i<a.length; i++){
+        console.log(a[2])
+      }
+      
+
+      //blog
+      //GET ELEMENT BY ID
+      let val;
+      val = document.getElementById("headingOne");
+      // we can access the class of the h1 element
+      val = val.className;
+      console.log(val);
+
+      //change styling
+
+      document.getElementById("headingOne").style.background = "#333";
+      document.getElementById("headingOne").style.color = "#fff";
+      // instead of calling the methods lots of time we can store it into a variable, and use it
+      let heading = document.getElementById("headingOne");
+      heading.style.padding = "10px";
+
+      //change content
+      // heading.textContent = 'Hello Everyone';
+      // heading.innerText = 'Hello ';
+      // heading.innerHTML = '<li>hello</li>';
+
+      //document.querySelector()
+
+      //get things by id (#)
+      // console.log(document.querySelector('#headingOne'))
+      //get things by class(.)
+      // console.log(document.querySelector('.primary-color'))
+      // get things by tag name
+      console.log(document.querySelector("h1"));
+
+      document.querySelector("li").style.color = "red";
+      document.querySelector("ul li").style.color = "blue";
+      document.querySelector("li:last-child").style.color = "green";
+      document.querySelector("li:nth-child(2)").style.color ="pink";
+      document.querySelector("li:nth-child(3)").textContent ="green color";
+      document.querySelector("li:nth-child(odd)").style.background ="#ccc";
+      document.querySelector("li:nth-child(even)").style.background ="#333";
+    </script>
+  </body>
+</html>

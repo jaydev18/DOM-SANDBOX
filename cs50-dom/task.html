@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("form").onsubmit = (e) => {
+          const task = document.querySelector("#task").value;
+         
+          const li = document.createElement('li');
+          li.innerHTML = task;
+        
+          document.querySelector('#tasks').append(li)
+          document.querySelector('#task').value = "";
+          //stop from submiting
+          return false;
+          /*when we submit the form it automatically take to us another page, that's way our expected output
+            on console flashes. we can prevent on it, but how 🤷‍♂️ ? we can passed a object as parameter
+            and set a method preventDefault() (e.preventDefault()) it'll stop to redirect other page or you
+            can used **return false**   */
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Tasks</h1>
+
+    <ul id="tasks"></ul>
+    <form>
+      <input type="text" id="task" placeholder="New Task" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

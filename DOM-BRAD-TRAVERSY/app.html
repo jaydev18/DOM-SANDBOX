@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbling and Deligation</title>
+  </head>
+  <body>
+    <div class="collection-item">Test</div>
+    <ul class="collection">
+    <li class="collection-item">1 item</li>
+    <li class="collection-item">2 item</li>
+    <li class="collection-item">3 item</li>
+    <li class="collection-item">4 item</li>
+    <li class="collection-item">5 item</li>
+    </ul>
+
+    <script>
+      // let items = document.getElementsByClassName('collection-item');
+      // console.log(items)
+      // let val = document.querySelector('ul').getElementsByClassName('collection-item')
+      // console.log(val);
+
+      //Get Element by tag name;
+
+      // let lis = document.getElementsByTagName('li');
+      
+      // console.log(lis[0]);
+      // lis[0].style.color = 'green';
+
+      //how to convert html collection to array
+      // lis = Array.from(lis)
+      // lis.reverse();
+      // console.log(lis);
+
+      // lis.forEach((li, index)=> console.log(li.innerText) )
+
+
+      //document.querySelectorAll()
+
+     ul = document.querySelector('ul');
+
+    lis = document.createElement('li');
+    lis.innerText = 'hello';
+    ul.appendChild(lis)
+    // console.log(ul)
+    // console.log(lis)
+    </script>
+  </body>
+</html>

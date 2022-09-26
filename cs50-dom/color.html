@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello...!</h1>
+    <button data-red ="red">Red</button>
+    <button data-blue="blue">Blue</button>
+    <button data-green="green">Green</button>
+
+    <script>
+      //change the color to red
+      document.addEventListener("DOMContentLoaded", function () {
+        //    document.querySelector('#red').addEventListener('click', function(){
+        //     document.querySelector('h1').style.color = 'red';
+        //    })
+        // })
+        // //change the color to blue
+        // document.addEventListener("DOMContentLoaded", function(){
+        //    document.querySelector('#blue').addEventListener('click', function(){
+        //     document.querySelector('h1').style.color = 'blue';
+        //    })
+        // })
+        // //change the color to green
+        // document.addEventListener("DOMContentLoaded", function(){
+        //    document.querySelector('#green').addEventListener('click', function(){
+        //     document.querySelector('h1').style.color = 'green';
+        //    })
+
+        // const heading = document.querySelector("h1");
+        // const red = document.querySelector("#red");
+        // const blue = document.querySelector("#blue");
+        // const green = document.querySelector("#green");
+
+        // //change the color to red
+        // red.addEventListener("click", function () {
+        //   heading.style.color = "red";
+        // });
+        // //change the text color to blue
+        // blue.addEventListener("click", function () {
+        //   heading.style.color = "blue";
+        // });
+        // green.addEventListener("click", function () {
+        //   heading.style.color = "green";
+        // });
+
+
+        //++++++++++++++++++++++++++++++++++++++
+        document.querySelectorAll("button").forEach(function(btn){
+            button.onlclick = function(){
+                document.querySelector("#hello").style.color = button.dataset.color
+            }
+        });
+      });
+    </script>
+  </body>
+</html>
